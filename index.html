@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 웹페이지 보이지는 않지만, 필요한 설정을 해두는 곳이에요.
+             우리가 집을 위해 미리 생각 해놓은 것을 적어두는 곳이라고 할 수 있죠!-->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 아래 3줄 og로 시작하는 문장이 링크공유시 보이는 그림, 타이틀, 간략내용 등임 !-->
+        <meta property="og:title" content="RedRavenBrook Profile" />
+        <meta property="og:description" content="opensea" />
+        <meta property="og:image" content="공유할 이미지" />
+        <title>RedRavenBrook Profile</title>
+        <style>
+            /*웹폰트 가져오기 */
+            @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+                * {
+                    font-family: "Pretendard",serif;
+                  }
+
+            body{
+                background-color: #44398A;
+            }
+            /*profile 선택자 지정*/
+            .profile{
+                width: 100px;
+                height: 100px;
+
+                background-color: green;
+                /*정심원으로 만들어줌*/
+                border-radius: 100%;
+                /*원테두리선 설정*/
+                border: 2px solid white;
+                /*원안에 사진넣기 3줄이 세트라고 보면됨*/
+                background-image: url('I.jpg');
+                background-position: center;
+                background-size: cover;
+            }
+            .main {
+                color: white;
+                font-size: 20px;
+
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            .sub {
+                color: white;
+                font-size: 14px;
+
+                margin-top: 0px;
+                margin-bottom:30px
+            }
+            /*사진과 이름 그리고 sub를 하나의 세트로 묶기*/
+            .wrap{
+                width: 300px;
+                /*마진입력 순서는 위부터 시계방향 순서로 입력*/
+                margin: 30px auto 0px auto;
+                /*박스에 꽉 맞추어 주기 display flex*/
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            /* style 태그안에서 .wrap>a 라고 오른쪽방향꺽쇠 >를 표기하면 wrap으로 이름붙인 div안에 모든 a 태그에 적용해달라는 뜻 */
+             .wrap > a {
+                width: 300px;
+                height: 50px;
+
+                background-color: white;
+                border-radius: 8px;
+
+                margin-bottom: 10px;
+                
+                font-size: 14px;
+                font-weight: bold;
+                color: #44398A;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* 하이퍼링크 a태그에 생기는 밑줄을 없애는 것 */
+                text-decoration: none;
+                /* 박스 그림자 효과 앞의 2개는 오른쪽밑으로 얼마나,
+                   3번째는 꼬리의 길이 4번째는 꼬리의 선명도 */
+                box-shadow: 3px 3px 5px 0px black;
+            }
+            /* 마우스 올렸을 때 색이 변하게 */
+            .wrap > a:hover {
+                background-color: #f2f2f2;
+            }
+             
+         </style>
+    </head>
+    <body>
+        <!-- 우리가 웹페이지에서 볼 수 있는 부분을 세팅하는 곳이죠.
+             우리가 집에서 눈에 볼 수 있는 집 구조들을 설정하는 곳이죠.-->
+        <div class="wrap">
+            <div class="profile"></div>
+            <h1 class="main">RedRavenBrook</h1>
+            <p class="sub">Metaversian</p>
+            <a target="_blank" href="http://opensea.io/">Opensea</a>
+                <a target="_blank" href="https://opensea.io/assets/matic/0x9a1153bcd21e863b7b3b5a3007be0097f4df62a7/87/">Elitecity Allies #87</a>
+                <a target="_blank" href="https://opensea.io/assets/matic/0x9a1153bcd21e863b7b3b5a3007be0097f4df62a7/86">Elitecity Allies #86</a>
+                <a target="_blank" href="https://opensea.io/assets/matic/0x9a1153bcd21e863b7b3b5a3007be0097f4df62a7/85">Elitecity Allies #85</a>
+        </div>
+    </body>
+</html>
